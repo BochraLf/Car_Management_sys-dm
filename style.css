@@ -1,10 +1,22 @@
 
- .car-image {
+.car-image {
   width: 73%;
   height: auto;
   display: inline-block;
-  margin-right: -180;
+  margin-right: -170;
   margin-left: 100;
+  animation-name: slide-in;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 
 .container {
