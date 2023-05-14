@@ -14,7 +14,7 @@ include 'functions.php';
    
       <div class="container" style="margin-top: 80px;">
       <div>
-        <p class="text-wrapper">Drive into your next Adventure &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;with us</p>
+        <p class="text-wrapper">Drive Into Your Next Adventure &nbsp;With Bouchra</p>
         </div>
         <img src="icons/car04.png" alt="car" class="car-image">
        
@@ -25,7 +25,11 @@ include 'functions.php';
 <style>
   body{
     background-color: #BAD7E9;
+    color: #383838;
   }
+  h1 {
+  font-family: 'Montserrat', sans-serif;
+}
 </style>
 
 
