@@ -22,12 +22,13 @@ echo <<<EOT
 
 		<link href="style.css" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+		
 	</head>
 	<body>
     <nav class="navtop">
     	<div>
 		  <img src="icons/unity.png" style=" padding:10px;"><h1 style="font-size: 30px; "> CRENTALS </h1>
-       		<a href="index.php"><i class="fas fa-home"></i>Home</a>
+		  <a href="index.php" class="home-link"><i class="fas fa-home"></i>Home</a>
     		<a href="CarRead.php"><i class="fas fa-car"></i>Cars</a>
 			<a href="RentalRead.php"><i class="fas fa-key"></i>Rental</a>
 			<a href="ClientRead.php"><i class="fas fa-user"></i>Client</a>

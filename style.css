@@ -70,6 +70,7 @@ body {
   width: 100%;
   border: 0;
 }
+
 .navtop div {
   display: flex;
   margin: 0 auto;
@@ -87,18 +88,20 @@ body {
   margin: 0;
   color: #3f3f3f;
   font-weight: normal;
+  font-family: "Gill Sans", sans-serif;
 }
 .navtop div a {
   padding: 0 20px;
   text-decoration: none;
-  color: #727272;
+  color: #212A3E;
   font-weight: bold;
+  font-family: cursive;
 }
 .navtop div a i {
   padding: 2px 8px 0 0;
 }
 .navtop div a:hover {
-  color: #717171;
+  color: #e40d0d;
 }
 .content {
   width: 1000px;
@@ -109,20 +112,23 @@ body {
   padding: 25px 0;
   font-size: 22px;
   border-bottom: 1px solid #ebebeb;
-  color: #666666;
+  color: #212A3E;
+  font-family: "Gill Sans", sans-serif;
 }
 .read .create-contact {
   display: inline-block;
   text-decoration: none;
-  background-color: #84cf80;
+  background-color: #DBDFEA;
   font-weight: bold;
   font-size: 14px;
-  color: #FFFFFF;
+  color: #212A3E;
   padding: 10px 15px;
   margin: 15px 0;
+  border-radius: 20px;
+  font-family: cursive;
 }
 .read .create-contact:hover {
-  background-color: #74b670;
+  background-color:  #6689bc;;
 }
 .read .pagination {
   display: flex;
@@ -142,25 +148,46 @@ body {
 }
 .read table {
   width: 100%;
-  padding-top: 30px;
-  border-collapse: collapse;
+  padding-bottom: 20px;
+  border-collapse: separate;
+  border-spacing: 0 5px;
+  
 }
 .read table thead {
   background-color: #ebeef1;
   border-bottom: 1px solid #d3dae0;
+  
+  border-radius: 20px
 }
 .read table thead td {
-  padding: 10px;
+  padding: 20px;
   font-weight: bold;
-  color: #767779;
+  color: #212A3E;
   font-size: 14px;
+  font-family: cursive;
+  
 }
+.read table thead td:first-child {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.read table thead td:last-child {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
 .read table tbody tr {
   background-color: #ffffff;
+  
+  
+  
 }
+
 .read table tbody tr:nth-child(even) {
   background-color: #fbfcfc;
 }
+
 .read table tbody tr:hover {
   background-color: #6689bc;
 }
@@ -171,11 +198,22 @@ body {
   color: #FFFFFF;
 }
 .read table tbody tr td {
-  padding: 10px;
+  padding: 20px ;
+  
+  font-family: "Gill Sans", sans-serif;
+  
 }
-.read table tbody tr td:nth-child(1) {
-  color: #a5a7a9;
+.read table tbody tr td:first-child {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
+
+.read table tbody tr td:last-child {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+
 .read table tbody tr td.actions {
   padding: 8px;
   text-align: right;
@@ -188,16 +226,16 @@ body {
   padding: 10px 12px;
 }
 .read table tbody tr td.actions .trash {
-  background-color: #c24141;
+  color:  #c24141;
 }
 .read table tbody tr td.actions .trash:hover {
-  background-color: #a33131;
+  color:  #e70909;
 }
 .read table tbody tr td.actions .edit {
-  background-color: #90a7a9;
+  color: #32a367;
 }
 .read table tbody tr td.actions .edit:hover {
-  background-color: #738b8d;
+  color: #07d162;
 }
 .update form {
   padding: 15px 0;
@@ -209,6 +247,8 @@ body {
   width: 400px;
   padding: 10px 0;
   margin-right: 25px;
+  font-family: "Gill Sans", sans-serif;
+  font-weight: bold;
 }
 .update form input {
   padding: 10px;
@@ -216,20 +256,22 @@ body {
   margin-right: 25px;
   margin-bottom: 15px;
   border: 1px solid #cccccc;
+  border-radius: 10px;
 }
 .update form input[type="submit"] {
   display: block;
-  background-color: #38b673;
+  background-color: #EA5455;
   border: 0;
   font-weight: bold;
   font-size: 14px;
   color: #FFFFFF;
   cursor: pointer;
   width: 200px;
-margin-top: 15px;
+  margin-top: 15px;
+  font-family: cursive;
 }
 .update form input[type="submit"]:hover {
-  background-color: #32a367;
+  background-color:  #6689bc;
 }
 .delete .yesno {
   display: flex;
@@ -246,3 +288,8 @@ margin-top: 15px;
 .delete .yesno a:hover {
   background-color: #32a367;
 }
+.logo-image {
+  width: 50px; /* Adjust the width to your desired size */
+  height: 50px; /* Maintain the aspect ratio */
+}
+

@@ -23,13 +23,17 @@ $contacts = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
   <form action="CarRetrieve.php" method="post">
     <label for="brand">Insert the brand that you want to select </label>
-    <input type="text" name="brand" id="brand" placeholder="for example : MERCEDES or AUDI" >
+    <div >
+    <input type="text" name="brand" placeholder="For example: MERCEDES or AUDI" id="brand">
+    <i class="fas fa-search"></i>
+  </div>
     <input type="submit" value="See the results">
   </form>
   <table>
 
   <thead>
     <tr>
+      <td>Logo</td>
       <td>Brand</td>
       <td>Model</td>
       <td>Price</td>
@@ -39,6 +43,7 @@ $contacts = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <?php foreach ($contacts as $car): ?>
     <tr>
       <br>
+      <td><img src="<?=$car['logoPath']?>" alt="Logo" class="logo-image"></td>
       <td><?=$car['brand']?></td>
       <td><?=$car['model']?></td>
       <td><?=$car['priceByDay']?></td>
@@ -48,5 +53,6 @@ $contacts = $stmt->fetchAll(PDO::FETCH_ASSOC);
   </tbody>
   </table>
 </div>
+
 
 <?=template_footer()?>

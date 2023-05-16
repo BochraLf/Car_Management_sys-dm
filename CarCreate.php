@@ -3,57 +3,81 @@
 
 
 <?php
-// functions php to make connection and the footer and the header of the html page 
 include 'functions.php';
 $pdo = pdo_connect_mysql();
 $msg = '';
-// Check if POST data is not empty and assign the values from post method to php variables
+
 if (!empty($_POST)) {
-    // Set-up the variables that are going to be inserted, we must check if the POST variables exist if not we can default them to blank
     $immat = isset($_POST['immat']) && !empty($_POST['immat']) && $_POST['immat'] != 'auto' ? $_POST['immat'] : NULL;
-    // Check if POST variable "immat" exists, if not default the value to blank for all variables
     $brand = isset($_POST['brand']) ? $_POST['brand'] : '';
     $model = isset($_POST['model']) ? $_POST['model'] : '';
     $priceByDay = isset($_POST['priceByDay']) ? $_POST['priceByDay'] : '';
-    
-    
-    // Insert new record into the contacts table using prepared statment (positioned statement not named)
-    $stmt = $pdo->prepare('INSERT INTO car VALUES (?, ?, ?, ?);');
-    $stmt->execute([$immat, $brand, $model, $priceByDay]);
-   
-   
-    // Output message
-    $msg = 'Created Successfully!';
+
+    $logoName = $_FILES['logo']['name'];
+    $logoTmpName = $_FILES['logo']['tmp_name'];
+    $logoPath = 'icons/' . $logoName;
+
+    // Move the uploaded logo file to the desired location
+    move_uploaded_file($logoTmpName, $logoPath);
+
+    try {
+        $stmt = $pdo->prepare('INSERT INTO car (immat, brand, model, priceByDay, logoPath) VALUES (?, ?, ?, ?, ?);');
+        $stmt->execute([$immat, $brand, $model, $priceByDay, $logoPath]);
+
+        $msg = 'Created Successfully!';
+    } catch (Exception $e) {
+        // Handle any exceptions/errors that occurred during the file upload or database insertion
+        $msg = 'Error: ' . $e->getMessage();
+    }
 }
 ?>
+<link rel="stylesheet" type="text/css" href="style.css">
 <?=template_header('Car')?>
 
 <div class="content update">
-  <h2> Insert New Car</h2>
-  <!-- Form for the client user to post the required field  -->
-  <!-- name attribute is the one sending varible to post method  -->
-  <form action="CarCreate.php" method="post">
-
-    <label for="immat">immat of the car : </label>
+  <h2>Insert New Car</h2>
+  <form action="CarCreate.php" method="post" enctype="multipart/form-data">
+    <label for="immat">immat of the car:</label>
     <input type="text" name="immat" placeholder="000099" id="immat">
 
-    <label for="brand">Brand :</label>
-    <input type="text" name="brand" placeholder="For example : MERCEDES or AUDI " id="brand">
+    <label for="brand">Brand:</label>
+    <input type="text" name="brand" placeholder="For example: MERCEDES or AUDI" id="brand">
 
-    <label for="model">Model : </label>
-    <input type="text" name="model" placeholder="For example : X1 or Q3 " id="model">
+    <label for="model">Model:</label>
+    <input type="text" name="model" placeholder="For example: X1 or Q3" id="model">
 
-    <label for="priceByDay">Price By Day : </label>
+    <label for="priceByDay">Price By Day:</label>
     <input type="text" name="priceByDay" placeholder="00000" id="priceByDay">
-
+    
+    <label for="logo">Logo:</label>
+    <input type="file" name="logo" id="logo">
+   
     <input type="submit" value="Add new Car">
   </form>
 
-  <!-- Print successful messgae when the query is executed -->
   <?php if ($msg): ?>
   <p><?=$msg?></p>
   <?php endif; ?>
 
 </div>
+<style>
+#logo {
+  /* Your custom styles here */
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px 12px;
+  color: #555;
+}
 
+/* Optional: Style when the file input has a selected file */
+#logo::file-selector-button {
+  /* Your custom styles here */
+  background-color: #DBDFEA;
+  border-color: #999;
+  padding: 6px 10px;
+  border-radius: 10px;
+  color: #555;
+}
+</style>
 <?=template_footer()?>

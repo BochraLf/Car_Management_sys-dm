@@ -16,7 +16,7 @@ $cars = $stmt->fetchAll(PDO::FETCH_ASSOC);
 // Get the total number of cars, this is so we can determine whether there should be a next and previous button
 $num_cars = $pdo->query('SELECT COUNT(*) FROM car')->fetchColumn();
 ?>
-
+<link rel="stylesheet" type="text/css" href="style.css">
 <?=template_header('Car')?>
 
 <div class="content read">  <Center> 
@@ -25,6 +25,7 @@ $num_cars = $pdo->query('SELECT COUNT(*) FROM car')->fetchColumn();
   <table>
     <thead>
       <tr>
+        <td>Logo</td>
         <td>#</td>
         <td>Brand </td>
         <td>Model</td>
@@ -35,6 +36,7 @@ $num_cars = $pdo->query('SELECT COUNT(*) FROM car')->fetchColumn();
     <tbody>
       <?php foreach ($cars as $car): ?>
       <tr>
+        <td><img src="<?=$car['logoPath']?>" alt="Logo" class="logo-image"></td>
         <td><?=$car['immat']?></td>
         <td><?=$car['brand']?></td>
         <td><?=$car['model']?></td>
