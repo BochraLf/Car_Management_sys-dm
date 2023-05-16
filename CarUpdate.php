@@ -3,7 +3,6 @@ include 'functions.php';
 $pdo = pdo_connect_mysql();
 $msg = '';
 
-// this code is composed of two parts , selectinf the data and based on the data table an update can be made 
 
 if (isset($_GET['immat'])) {
     if (!empty($_POST)) {

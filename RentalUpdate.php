@@ -2,10 +2,8 @@
 include 'functions.php';
 $pdo = pdo_connect_mysql();
 $msg = '';
-// Check if the contact id exists, for example update.php?id=1 will get the contact with the id of 1
 if (isset($_GET['rentalID'])) {
     if (!empty($_POST)) {
-        // This part is similar to the create.php, but instead we update a record and not insert
         $rentalID = isset($_POST['rentalID']) ? $_POST['rentalID'] : NULL;
         $locDate = isset($_POST['locDate']) ? $_POST['locDate'] : '';
         $sDate = isset($_POST['sDate']) ? $_POST['sDate'] : '';
@@ -18,7 +16,6 @@ if (isset($_GET['rentalID'])) {
         $stmt->execute([$rentalID, $locDate, $sDate, $eDate, $rentalType, $immat, $idClient, $_GET['rentalID']]);
         $msg = 'Updated Successfully!';
     }
-    // Get the contact from the contacts table
     $stmt = $pdo->prepare('SELECT * FROM rental WHERE rentalID = ?');
     $stmt->execute([$_GET['rentalID']]);
     $rental = $stmt->fetch(PDO::FETCH_ASSOC);

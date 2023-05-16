@@ -1,9 +1,6 @@
 <?php
 include 'functions.php';
 
-// Your PHP code here.
-
-// Home Page template below.
 ?>
 <link rel="stylesheet" type="text/css" href="style.css">
 <?=template_header('CRentals')?>

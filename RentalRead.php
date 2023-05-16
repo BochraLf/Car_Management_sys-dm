@@ -1,15 +1,10 @@
 <?php
 include 'functions.php';
-// Connect to MySQL database
 $pdo = pdo_connect_mysql();
-// Get the page via GET request (URL param: page), if non exists default the page to 1
 $page = isset($_GET['page']) && is_numeric($_GET['page']) ? (int)$_GET['page'] : 1;
-// Prepare the SQL statement and get records from our contacts table
 $stmt = $pdo->prepare('SELECT * FROM `rental` ORDER BY rentalID ');
 $stmt->execute();
-// Fetch the records so we can display them in our template.
 $rentals = $stmt->fetchAll(PDO::FETCH_ASSOC);
-// Get the total number of rentals
 $num_rentals = $pdo->query('SELECT COUNT(*) FROM rental')->fetchColumn();
 ?>
 

@@ -2,12 +2,8 @@
 include 'functions.php';
 $pdo = pdo_connect_mysql();
 $msg = '';
-// Check if POST data is not empty
 if (!empty($_POST)) {
-    // Post data not empty insert a new record
-    // Set-up the variables that are going to be inserted, we must check if the POST variables exist if not we can default them to blank
-    $idClient = isset($_POST['idClient']) && !empty($_POST['idClient']) && $_POST['idClient'] != 'auto' ? $_POST['idClient'] : NULL;
-    // Check if POST variable "name" exists, if not default the value to blank, basically the same for all variables
+     $idClient = isset($_POST['idClient']) && !empty($_POST['idClient']) && $_POST['idClient'] != 'auto' ? $_POST['idClient'] : NULL;
     $fName = isset($_POST['fName']) ? $_POST['fName'] : '';
     $lName = isset($_POST['lName']) ? $_POST['lName'] : '';
     $phone = isset($_POST['phone']) ? $_POST['phone'] : '';
