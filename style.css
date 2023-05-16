@@ -27,15 +27,15 @@
 }
 .text-wrapper {
   color: #383838;
-  margin-left: -150px;
-  text-align: left;
-  font-size: 60px;
+  margin-left: -90px;
+  text-align: center;
+  font-size: 40px;
   margin-top: -20px;
-  border: 3px solid #383838;
+  border: 1px solid #383838;
   border-radius: 40px;
   padding: 30px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   animation: fade-in 2s ease-out;
 }
 
@@ -51,21 +51,21 @@
 }
 * {
   box-sizing: border-box;
-  font-family: montserrat ;
+  font-family: "Roboto" ;
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-  background-color: #BAD7E9;
+  background-color: #ededed;
   margin: 0;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .navtop {
-  background-color: #cfe2ee;
+  background-color: #cfcfcf;
   height: 60px;
   width: 100%;
   border: 0;
@@ -88,7 +88,7 @@ body {
   margin: 0;
   color: #3f3f3f;
   font-weight: normal;
-  font-family: "Gill Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 .navtop div a {
   padding: 0 20px;
@@ -113,7 +113,7 @@ body {
   font-size: 22px;
   border-bottom: 1px solid #ebebeb;
   color: #212A3E;
-  font-family: "Gill Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 .read .create-contact {
   display: inline-block;
@@ -124,6 +124,18 @@ body {
   color: #212A3E;
   padding: 10px 15px;
   margin: 15px 0;
+  border-radius: 20px;
+  font-family: cursive;
+}
+.acceder{
+  display: inline-block;
+  text-decoration: none;
+  background-color: #a30707;
+  font-weight: bold;
+  font-size: 16px;
+  color: #ffffff;
+  padding: 10px 10px;
+  margin: 5px 0;
   border-radius: 20px;
   font-family: cursive;
 }
@@ -200,7 +212,7 @@ body {
 .read table tbody tr td {
   padding: 20px ;
   
-  font-family: "Gill Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
   
 }
 .read table tbody tr td:first-child {
@@ -247,7 +259,7 @@ body {
   width: 400px;
   padding: 10px 0;
   margin-right: 25px;
-  font-family: "Gill Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: bold;
 }
 .update form input {
@@ -288,8 +300,5 @@ body {
 .delete .yesno a:hover {
   background-color: #32a367;
 }
-.logo-image {
-  width: 50px; /* Adjust the width to your desired size */
-  height: 50px; /* Maintain the aspect ratio */
-}
+
 

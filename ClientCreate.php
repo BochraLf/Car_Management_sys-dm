@@ -15,7 +15,7 @@ if (!empty($_POST)) {
     $city = isset($_POST['city']) ? $_POST['city'] : '';
     $job = isset($_POST['job']) ? $_POST['job'] : '';
     // Insert new record into the contacts table
-    $stmt = $pdo->prepare('INSERT INTO rental VALUES (?, ?, ?, ?, ? ,? ,?);');
+    $stmt = $pdo->prepare('INSERT INTO client (idClient,fName	,lName,phone,street,city,job) VALUES (?,?, ?, ?, ?, ?,?);');
     $stmt->execute([$idClient, $fName, $lName, $phone, $street,$city,$job]);
     // Output message
     $msg = 'Created Successfully!';
@@ -28,25 +28,25 @@ if (!empty($_POST)) {
   <form action="ClientCreate.php" method="POST">
     
     <label for="idClient">idClient</label>
-    <input type="text" name="idClient" placeholder="for example : 000099" id="idClient">
+    <input type="text" name="idClient" placeholder="For example : 00001" id="idClient">
 
     <label for="fName">first Name :</label>
-    <input type="text" name="fName" placeholder="for example : Ali" id="fName">
+    <input type="text" name="fName" placeholder="For example : Bochra" id="fName">
 
     <label for="lName">last Name</label>
-    <input type="text" name="lName" placeholder="for example : Hadji" id="lName">
+    <input type="text" name="lName" placeholder="For example : Lafifi" id="lName">
 
     <label for="phone">phone</label>
-    <input type="text" name="phone" placeholder="for example : 0112233445" id="phone">
+    <input type="text" name="phone" placeholder="For example : 0112233445" id="phone">
 
     <label for="street">street</label>
-    <input type="text" name="street" placeholder="for example : Bougara" id="street">
+    <input type="text" name="street" placeholder="For example : ELHarrach" id="street">
 
     <label for="city">city</label>
-    <input type="text" name="city" placeholder="for example : Alger" id="city">
+    <input type="text" name="city" placeholder="For example : Alger" id="city">
 
     <label for="job">job</label>
-    <input type="text" name="job" placeholder="for example : Analyst" id="job">
+    <input type="text" name="job" placeholder="For example : Data Analyst" id="job">
 
     
 

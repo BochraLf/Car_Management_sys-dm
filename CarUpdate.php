@@ -43,10 +43,10 @@ if (isset($_GET['immat'])) {
     <input type="text" name="brand" placeholder="MERCEDES" value="<?=$car['brand']?>" id="brand">
 
     <label for="model">model</label>
-    <input type="text" name="model" placeholder="E213" value="<?=$car['model']?>" id="model">
+    <input type="text" name="model" placeholder="X1" value="<?=$car['model']?>" id="model">
     
     <label for="priceByDay">priceByDay</label>
-    <input type="text" name="priceByDay" placeholder="9999" value="<?=$car['priceByDay']?>" id="priceByDay">
+    <input type="text" name="priceByDay" placeholder="start from 0000DA" value="<?=$car['priceByDay']?>" id="priceByDay">
     
     <input type="submit" value="Update">
   </form>

@@ -10,21 +10,27 @@ include 'functions.php';
 
 <div  >
   <div class="content" style="text-align: center ; ">
-    <h1 style="font-size: 50px; margin-top: 20px; ">Car Rental Management System <br> </h1>
    
       <div class="container" style="margin-top: 80px;">
       <div>
-        <p class="text-wrapper">Drive Into Your Next Adventure &nbsp;With Bouchra</p>
+        <p class="text-wrapper" > Drive Into Your Next Adventure With CRentals</p>
+        <a href="CarRead.php" class="acceder">View Car's catalogue </a>
+        <br>
+        <a href="RentalCreate.php" class="acceder">Start a Rental </a>
+        <br>
+        <a href="ClientCreate.php" class="acceder">Start with us </a>
+
         </div>
         <img src="icons/car04.png" alt="car" class="car-image">
        
        </div>
+
   </div>
 </div>
 
 <style>
   body{
-    background-color: #BAD7E9;
+    background-color: #ededed ;
     color: #383838;
   }
   h1 {

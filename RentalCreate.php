@@ -27,10 +27,9 @@ if (!empty($_POST)) {
   <h2> Insert New Rental</h2>
   <form action="RentalCreate.php" method="POST">
     <label for="rentalID">Rental ID</label>
+    <input type="text" name="rentalID" placeholder="For exemple: 000001" id="rentalID">
 
-    <input type="text" name="rentalID" placeholder="99" id="rentalID">
-
-    <label for="locDate">locaction Date :</label>
+    <label for="locDate">Locaction Date :</label>
     <input type="date" name="locDate"  id="locDate">
 
     <label for="sDate">Starting Date</label>
@@ -40,13 +39,13 @@ if (!empty($_POST)) {
     <input type="date" name="eDate"  id="eDate">
 
     <label for="rentalType">Type of the rental </label>
-    <input type="text" name="rentalType" placeholder="WD OR ND" id="rentalType">
+    <input type="text" name="rentalType" placeholder="WD / ND" id="rentalType">
 
-    <label for="immat">immat of the car </label>
-    <input type="text" name="immat" placeholder="000099" id="immat">
+    <label for="immat">Immat of the car </label>
+    <input type="text" name="immat" placeholder="000009" id="immat">
 
     <label for="idClient">Client ID</label>
-    <input type="text" name="idClient" placeholder="000099" id="idClient">
+    <input type="text" name="idClient" placeholder="000009" id="idClient">
 
     
 
