@@ -16,9 +16,9 @@ include 'functions.php';
         <p class="text-wrapper" > Drive Into Your Next Adventure With CRentals</p>
         <a href="CarRead.php" class="acceder">View Car's catalogue </a>
         <br>
-        <a href="RentalCreate.php" class="acceder">Start a Rental </a>
-        <br>
         <a href="ClientCreate.php" class="acceder">Start with us </a>
+        <br>
+        <a href="RentalCreate.php" class="acceder"> Rent a car </a>
 
         </div>
         <img src="icons/car04.png" alt="car" class="car-image">

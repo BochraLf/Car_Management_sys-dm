@@ -33,7 +33,7 @@ if (isset($_GET['rentalID'])) {
 
 <div class="content update">
   <h2>Update rental #<?=$rental['rentalID']?></h2>
-  <form action="CarUpdate.php?rentalID=<?=$rental['rentalID']?>" method="post">
+  <form action="RentalUpdate.php?rentalID=<?=$rental['rentalID']?>" method="post">
     <label for="rentalID">rentalID</label>
     <input type="text" name="rentalID" placeholder="000016" value="<?=$rental['rentalID']?>" id="rentalID">
 
@@ -47,13 +47,13 @@ if (isset($_GET['rentalID'])) {
     <input type="text" name="eDate" placeholder="01/01/2001" value="<?=$rental['eDate']?>" id="eDate">
 
     <label for="rentalType">rentalType</label>
-    <input type="text" name="rentalType" placeholder="WD OR VD" value="<?=$rental['rentalType']?>" id="rentalType">
+    <input type="text" name="rentalType" placeholder="WD / VD" value="<?=$rental['rentalType']?>" id="rentalType">
+
+    <label for="immat">Immat of the car</label>
+    <input type="text" name="immat" placeholder="00001" value="<?=$rental['immat']?>" id="immat">
 
     <label for="idClient">idClient</label>
     <input type="text" name="idClient" placeholder="00001" value="<?=$rental['idClient']?>" id="idClient">
-
-    <label for="idClient">idClient</label>
-    <input type="text" name="idClient" placeholder="9999" value="<?=$rental['idClient']?>" id="idClient">
 
     <input type="submit" value="Update">
   </form>

@@ -130,14 +130,17 @@ body {
 .acceder{
   display: inline-block;
   text-decoration: none;
-  background-color: #a30707;
-  font-weight: bold;
+  background-color: #b21919;
   font-size: 16px;
   color: #ffffff;
   padding: 10px 10px;
   margin: 5px 0;
-  border-radius: 20px;
+  border-radius: 15px;
   font-family: cursive;
+  margin-right: 110;
+}
+.acceder:hover{
+  background-color:  #882929;
 }
 .read .create-contact:hover {
   background-color:  #6689bc;;
